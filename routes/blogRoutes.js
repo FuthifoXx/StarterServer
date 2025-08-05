@@ -1,6 +1,10 @@
 const express = require('express');
+
 const postController = require('../controllers/blogController');
+
 const router = express.Router();
+
+// router.param('id', postController.checkID);
 
 router
   .route('/')
