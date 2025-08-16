@@ -1,6 +1,7 @@
 const express = require('express');
-
 const postController = require('../controllers/blogController');
+const { protect } = require('../middleware/protect');
+const upload = require('../middleware/upload');
 
 const router = express.Router();
 
@@ -9,12 +10,12 @@ const router = express.Router();
 router
   .route('/')
   .get(postController.getAllBlogs)
-  .post(postController.createBlog);
+  .post(protect, upload.single('image'), postController.createBlog);
 
 router
   .route('/:id')
   .get(postController.getBlog)
-  .patch(postController.updateBlog)
-  .delete(postController.deleteBlog);
+  .patch(protect, postController.updateBlog)
+  .delete(protect, postController.deleteBlog);
 
 module.exports = router;

@@ -15,22 +15,18 @@ const BlogPostSchema = new mongoose.Schema(
       type: String,
       required: [true, 'A blog must have content'],
     },
-    // imageUrl: {
-    //   type: String,
-    //   default: '',
-    // },
-    // author: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: 'User',
-    //   required: [true, 'A blog must have an author'],
-    // },
+    imageUrl: {
+      type: String,
+      default: '',
+    },
+    author: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: [true, 'A blog must have an author'],
+    },
   },
   {
-    // timestamps: true,
-    createdAt: {
-      type: Date,
-      default: Date.now(),
-    },
+    timestamps: true,
   },
 );
 

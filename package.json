@@ -10,10 +10,15 @@
   "author": "FuthiFoXx  ",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "mongoose": "^8.17.0",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "multer-storage-cloudinary": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8.57.1",
@@ -24,10 +29,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.5.3",
     "eslint-plugin-react": "^7.37.5",
+    "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2"
   },
   "engine": {
-    "node": ">=10.0.0"
+    "node": ">=8.0.0"
   }
 }
